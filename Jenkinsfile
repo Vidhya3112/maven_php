@@ -1,4 +1,12 @@
 pipeline {
+	
+	environment{
+		registry = "vidhya3112/devops"
+		registryCredentials = 'docker-hub-id'
+		dockerImage = ''
+	}
+	
+	
     agent any
 	
 	
@@ -24,17 +32,20 @@ pipeline {
         stage('Build image') {
         /* This builds the actual image */
             steps{
-        app = docker.build("vidhya3112/devops")
+		    script{
+        dockerImage = docker.build registry +":$BUILD_NUMBER"
             }
+	    }
     }
 
         stage('Push image') {
         /* 
 			You would need to first register with DockerHub before you can push images to your account
 		*/steps{
-        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-id') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+			script{
+        docker.withRegistry('',registryCredentials) {
+            dockerImage.push()
+	}
             } 
                 echo "Trying to Push Docker Build to DockerHub"
         }
