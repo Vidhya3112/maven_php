@@ -31,7 +31,8 @@ pipeline {
         }
         stage('Build image') {
         /* This builds the actual image */
-            steps{
+            
+		steps{
 		    script{
         dockerImage = docker.build registry +":$BUILD_NUMBER"
             }
@@ -40,8 +41,8 @@ pipeline {
 
         stage('Push image') {
         /* 
-			You would need to first register with DockerHub before you can push images to your account
-		*/steps{
+			You would need to first register with DockerHub before you can push images to your account*/
+		steps{
 			script{
         docker.withRegistry('',registryCredentials) {
             dockerImage.push()
