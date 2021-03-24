@@ -29,6 +29,16 @@ pipeline {
                 }
             }
         }
+	    
+	  stage ('SonarQube Analysis') {
+
+            steps {
+                withSonar('SonarQubeServer') {
+                    sh 'sonar:sonar'
+                }
+            }
+        }   
+	 
         stage('Build image') {
         /* This builds the actual image */
             
