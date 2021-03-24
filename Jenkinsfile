@@ -33,7 +33,7 @@ pipeline {
 	  stage ('SonarQube Analysis') {
 
             steps {
-                withSonar('SonarQubeServer') {
+                withMaven(maven : 'Maven-3.6.3') {
                     sh 'maven sonar:sonar'
                 }
             }
