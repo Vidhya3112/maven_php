@@ -14,14 +14,14 @@
     </properties>
          
     <build>
+             
+             <sourceDirectory>src/main/resources</sourceDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <sourceDirectory>src/main/resources</sourceDirectory>
-                    <testSourceDirectory></testSourceDirectory>
-
+                   
               </configuration>
             </plugin>
             <plugin>
