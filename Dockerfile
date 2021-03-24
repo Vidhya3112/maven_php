@@ -1,3 +1,4 @@
 
 FROM ubuntu 
 MAINTAINER visajchan@3112
+EXPOSE 8000
