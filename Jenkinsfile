@@ -1,5 +1,10 @@
 pipeline {
     agent any
+	
+	environment{
+		
+		app =''
+	}
 
     stages {
         stage ('Compile Stage') {
