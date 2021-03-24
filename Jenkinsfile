@@ -34,7 +34,7 @@ pipeline {
 
             steps {
                 withSonar('SonarQubeServer') {
-                    sh 'sonar:sonar'
+                    sh 'maven sonar:sonar'
                 }
             }
         }   
