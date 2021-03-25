@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.host.url>http://http://35.236.27.209</sonar.host.url>
     <sonar.login>admin</sonar.login>
-    <sonar.password></sonar.password>
+    <sonar.password>XVide9hvKG7B</sonar.password>
     <sonar.exclusions>org/binarytherapy/generated/*/, **/GuiceBindComposer.java</sonar.exclusions>
     <sonar.dynamic>reuseReports</sonar.dynamic>
     </properties>
