@@ -9,7 +9,8 @@ pipeline {
 	
     agent any
 	
-	
+	Stages
+	{
 
     
 	    
