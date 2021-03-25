@@ -34,7 +34,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'Maven-3.6.3') {
-                    sh 'maven sonar:sonar'
+                    sh 'mvn sonar:sonar'
                 }
             }
         }   
