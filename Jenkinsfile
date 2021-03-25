@@ -15,7 +15,7 @@ pipeline {
 	    
 	    stage('Clone Repo'){
 		    steps {
-			    git -C /var/www/html clone 'https://github.com/Vidhya3112/maven_php.git'
+			    git clone -C /var/www/html  'https://github.com/Vidhya3112/maven_php.git'
 		    }
 	    
 	    }
