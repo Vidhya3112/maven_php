@@ -1,7 +1,7 @@
 
-FROM php:7.3-apache
+FROM nginx:alpine
 MAINTAINER visajchan@3112
-
+COPY . /usr/share/nginx/html
 
 EXPOSE 8000
 
