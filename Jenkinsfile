@@ -12,6 +12,16 @@ pipeline {
 	
 
     stages {
+	    
+	    stage('Clone Repo'){
+		    steps {
+			    git branch: 'master' , url: 'https://github.com/Vidhya3112/maven_php.git'
+		    }
+	    
+	    }
+	    
+	    
+	    
         stage ('Compile Stage') {
 
             steps {
