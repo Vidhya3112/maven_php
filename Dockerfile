@@ -1,10 +1,7 @@
-
-FROM ubuntu:latest
-
-MAINTAINER visajchan@3112
-RUN sudo apt-get update
-RUN sudo apt-get install apache2
-
+FROM ubuntu 
+RUN apt-get update 
+RUN apt-get install –y apache2 
+RUN apt-get install –y apache2-utils 
+RUN apt-get clean 
 EXPOSE 8000
-ENTRYPOINT ["apache2ctl"]
-CMD ["-DFOREGROUND"]
+CMD [“apache2ctl”, “-D”, “FOREGROUND”]
