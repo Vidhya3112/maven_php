@@ -1,5 +1,5 @@
 
-FROM ubuntu:updated
+FROM ubuntu:latest
 
 MAINTAINER visajchan@3112
 
